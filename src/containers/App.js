@@ -43,7 +43,7 @@ class App extends React.Component {
         } else {
             return (
                 <div className='pa2 tc ma3 ' >
-                    <h1 className='f1'  >Contacts</h1>
+                    <h1 className='f1'>Contacts</h1>
                     <Searchbox SearchChange={this.onSearchChange} />
                     <Scroll>
                         <ErrorBoundry >
