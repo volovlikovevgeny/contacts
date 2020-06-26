@@ -7,6 +7,14 @@
 
     h1{
         font-family: 'SEGA LOGO FONT';
-        font-weight: 200;
-        color: #29947d;  /* fallback for old browsers */
+        font-weight: 300;
+        color: #29947d;
+    }
+
+    @media (max-width:375px){
+        h1{
+        font-family: 'Times New Roman', Times, serif;
+        padding-bottom: 0px;
+        
+        }
     }

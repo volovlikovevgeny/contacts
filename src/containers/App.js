@@ -1,6 +1,6 @@
 import React from 'react'
 import CardList from '../components/CardList'
-// import { robots } from '../components/robots'
+import { robots } from '../components/robots'
 import Searchbox from '../components/Searchbox'
 import './App.css'
 import Scroll from '../components/Scroll'
@@ -12,9 +12,13 @@ class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            robots: [],
+            //Api
+            // robots: [],
+            //robots
+            robots: robots,
             searchfield: ''
         }
+
     }
 
     componentDidMount() {
@@ -35,11 +39,11 @@ class App extends React.Component {
             return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
         })
         if (this.state.robots.length === 0) {
-            return <h1>Wait a few more minutes</h1>
+            return <h1>Loading,Wait a few more minutes </h1>
         } else {
             return (
                 <div className='pa2 tc ma3 ' >
-                    <h1 className='f1'>Contacts of people</h1>
+                    <h1 className='f1'>Contacts</h1>
                     <Searchbox SearchChange={this.onSearchChange} />
                     <Scroll>
                         <ErrorBoundry >
