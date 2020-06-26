@@ -1,6 +1,6 @@
 import React from 'react'
 import CardList from '../components/CardList'
-import { robots } from '../components/robots'
+// import { robots } from '../components/robots'
 import Searchbox from '../components/Searchbox'
 import './App.css'
 import Scroll from '../components/Scroll'
@@ -43,14 +43,14 @@ class App extends React.Component {
         } else {
             return (
                 <div className='pa2 tc ma3 ' >
-                    <h1 className='f1'>Contacts</h1>
+                    <h1 className='f1'  >Contacts</h1>
                     <Searchbox SearchChange={this.onSearchChange} />
                     <Scroll>
                         <ErrorBoundry >
                             <CardList robots={filteredRobots} />
                         </ErrorBoundry>
                     </Scroll>
-                </div>
+                </div >
             )
         }
     }
