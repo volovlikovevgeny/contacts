@@ -13,9 +13,9 @@ class App extends React.Component {
         super(props)
         this.state = {
             //Api
-            // robots: [],
+            robots: [],
             //robots
-            robots: robots,
+            // robots: robots,
             searchfield: ''
         }
 
